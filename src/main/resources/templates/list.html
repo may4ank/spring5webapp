@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mayank Page for Books</title>
+</head>
+<body>
+
+<H1> Books List </H1>
+   <table>
+       <tr>
+           <th> Book-ID </th>
+           <th>Titles</th>
+           <th>Publisher Address</th>
+       </tr>
+
+       <tr th:each="book : ${books}">
+           <td th:text="${book.id}">234</td>
+           <td th:text="${book.title}"> Mayank spring API </td>
+           <td th:text="${book.publisher.address}">hola man</td>
+
+       </tr>
+   </table>
+ <H1> List of Authors</H1>
+   <table>
+       <tr>
+           <th> Author-ID </th>
+           <th> First Name</th>
+           <th>Last Name</th>
+
+       </tr>
+
+       <tr th:each="author : ${authors}">
+           <td th:text="${author.id}">234</td>
+           <td th:text="${author.firstName}"> fname</td>
+           <td th:text="${author.lastName}"> lname</td>
+
+
+       </tr>
+   </table>
+</body>
+</html>

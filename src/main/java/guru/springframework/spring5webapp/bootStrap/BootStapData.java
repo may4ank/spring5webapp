@@ -43,6 +43,8 @@ public class BootStapData implements CommandLineRunner {
 
         karni.getBooks().add(KAr_bk);
         KAr_bk.getAuthors().add(karni);
+        pub2.getBooks().add(KAr_bk);
+        KAr_bk.setPublisher(pub2);
 
 
         authorRepository.save(karni);
